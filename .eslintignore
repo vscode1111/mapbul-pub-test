@@ -1,0 +1,9 @@
+# node modules
+node_modules
+
+# ignore transpiled files
+packages/*/lib
+
+lerna-debug.log
+
+example
