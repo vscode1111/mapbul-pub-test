@@ -16,6 +16,7 @@
     "bootstrap": "lerna bootstrap --hoist",
     "bootstrap:example": "cd example && npm install",
     "build": "lerna run build",
+    "copy": "ncp tsconfig.json tsconf.tsx",
     "test": "lerna run test",
     "test:watch": "lerna run test:watch",
     "clean": "rimraf dist && lerna run clean",
@@ -52,6 +53,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "lerna": "^3.13.0",
     "rimraf": "^3.0.0",
+    "tslib": "^1.10.0",
     "tslint": "^5.11.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.2.4"
