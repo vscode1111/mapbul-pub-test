@@ -1,5 +1,5 @@
-// import { test } from '@mapbul-pub/common'
-import { test } from 'common'
+import { test } from '@mapbul-pub/common'
+// import { test } from 'common'
 // import { test } from '../../common'
 // import { test } from '../../common/src'
 

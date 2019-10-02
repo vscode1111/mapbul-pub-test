@@ -5,8 +5,8 @@
   "scripts": {
     "clean": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
-    "build": "webpack | gnomon",
-    "debug": "copyfiles -f tsconfig.debug.json tsconfig.json",
+    "build": "ncp tsconfig.build.json tsconfig.json && webpack | gnomon",
+    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6589 --respawn src/index.ts",
     "test": "mocha --require ./babel-polyfill.js test/**/*.spec.ts"
   },
   "keywords": [
