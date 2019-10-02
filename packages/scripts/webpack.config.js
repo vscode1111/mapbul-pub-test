@@ -16,7 +16,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
-  devtool: 'source-map',
+  // devtool: 'source-map',
   optimization: {
     minimize: true
   },

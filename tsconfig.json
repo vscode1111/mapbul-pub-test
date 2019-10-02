@@ -16,14 +16,6 @@
          "es7",
          "dom"
       ],
-      "baseUrl": "./",  
-      "paths": {
-        "*": ["types/*"],
-        // "common": ["./packages/common/src"],
-        "common2/*": ["./src/common/*"],
-        "server2/*": ["./src/server/*"],
-        "client2/*": ["./src/client/*"],
-        "codegen2/*": ["./src/codegen/*"],
-      }
+      "baseUrl": "./"
    }
 }
