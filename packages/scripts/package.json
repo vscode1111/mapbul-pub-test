@@ -6,7 +6,7 @@
     "clean": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
     "build": "webpack | gnomon",
-    "debug": "cross-env NODE_ENV=development ts-node-dev --inspect=6589 --respawn src/index.ts",
+    "debug": "copyfiles -f tsconfig.debug.json tsconfig.json",
     "test": "mocha --require ./babel-polyfill.js test/**/*.spec.ts"
   },
   "keywords": [
@@ -52,6 +52,7 @@
     "mocha": "5.2.0",
     "ts-loader": "^5.3.3",
     "ts-node-dev": "^1.0.0-pre.43",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.2.4",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.1"
