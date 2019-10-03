@@ -3,6 +3,9 @@
   "compilerOptions": {
     "outDir": "lib",
     "rootDir": "src",
+    "paths": {
+      "@mapbul-pub/common": ["./packages/common/src"],
+    }  
   },
   "include": ["./src/**/*"]
 }
