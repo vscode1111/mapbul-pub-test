@@ -1,6 +1,10 @@
 const path = require('path')
 
 module.exports = {
+  target: "node",
+  // node: {
+  //   dotenv: 'empty',
+  // },
   mode: 'production',
   entry: {
     index: './src/index.ts'
