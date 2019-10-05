@@ -1,7 +1,7 @@
-export * from './fileUtils'
-export * from './processUtils'
-export * from './serverConfig'
+export * from './fileUtils';
+export * from './processUtils';
+export * from './serverConfig';
 
 export const test = () => {
-  console.log('test 58')
-}
+  console.log('test --59');
+};
