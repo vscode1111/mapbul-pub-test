@@ -4,5 +4,9 @@
     "outDir": "lib",
     "rootDir": "src",
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "paths": {
+    "server/*": ["./*"],
+    "common/*": ["./src/common/*"]
+  }
 }

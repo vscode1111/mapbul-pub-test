@@ -1,25 +1,24 @@
-// export * from './buildServer'
-// export * from './deployServer'
-import { test } from '@mapbul-pub/common';
+if (process.env.NODE_ENV !== 'development') {
+  require('module-alias/register');
+  console.log('module-alias/register');
+}
 
-// import { test } from 'common'
-// import { test } from '../../common'
-// import { test } from '../../common/src'
+import { setEnvVariables, serverConfig } from 'common/serverConfig';
+setEnvVariables(__dirname + '/.env');
+console.log(serverConfig);
 
-const sleep = (ms: number) => {
-  return new Promise(resolve => setTimeout(resolve, ms));
-};
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from 'server/app.module';
+import { NestExpressApplication } from '@nestjs/platform-express';
+import { join } from 'path';
 
-export const main = async () => {
-  await sleep(500);
-  console.log('starting');
+async function bootstrap() {
+  const port = process.env.PORT || 3100;
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  app.setBaseViewsDir(join(__dirname, 'views'));
+  app.setViewEngine('hbs');
 
-  test();
-  const t = 78;
-  console.log(t);
-  console.log(t);
-};
-
-// require('make-runnable')
-main();
-// test()
+  await app.listen(port);
+  console.log(`Server started at http://localhost:${port}`);
+}
+bootstrap();
