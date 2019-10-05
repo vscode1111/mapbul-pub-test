@@ -22,15 +22,9 @@
   },
   "files": [
     "lib",
-    "src"
+    "src",
+    "test"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/walletconnect/walletconnect-monorepo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/walletconnect/walletconnect-monorepo/issues"
-  },
   "devDependencies": {
     "@types/fs-extra": "^8.0.0",
     "@types/mkdirp": "^0.5.2",
@@ -43,7 +37,7 @@
     "ts-loader": "^6.2.0",
     "ts-node-dev": "^1.0.0-pre.43",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.2.4",
+    "typescript": "^3.4.3",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.1"
   },
