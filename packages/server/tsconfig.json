@@ -3,10 +3,10 @@
   "compilerOptions": {
     "outDir": "lib",
     "rootDir": "src",
+    "paths": {
+      "server/*": ["./src/*"],
+      "common/*": ["./src/common/*"]
+    }
   },
   "include": ["./src/**/*"],
-  "paths": {
-    "server/*": ["./*"],
-    "common/*": ["./src/common/*"]
-  }
 }

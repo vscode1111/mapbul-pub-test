@@ -41,6 +41,8 @@
   "dependencies": {
     "@mapbul-pub/common": "^1.0.0",
     "@nestjs/common": "^6.8.2",
+    "@nestjs/core": "^6.8.2",
+    "@nestjs/platform-express": "^6.8.2",
     "app-root-path": "^2.2.1",
     "mysql": "^2.17.1"
   },

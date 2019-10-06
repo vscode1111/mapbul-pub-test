@@ -1,7 +1,7 @@
-if (process.env.NODE_ENV !== 'development') {
-  require('module-alias/register');
-  console.log('module-alias/register');
-}
+// if (process.env.NODE_ENV !== 'development') {
+//   require('module-alias/register');
+//   console.log('module-alias/register');
+// }
 
 import { setEnvVariables, serverConfig } from 'common/serverConfig';
 setEnvVariables(__dirname + '/.env');
