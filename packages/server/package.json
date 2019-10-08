@@ -5,8 +5,10 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "webpack": "rimraf dist && webpack",
+    "clean": "rimraf lib",
+    "clean:node_modules": "rimraf node_modules",
+    "build": "rimraf dist && webpack",
+    "build:tsc": "rimraf dist && tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
