@@ -9,7 +9,14 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "*": ["types/*"],
+        "common/*": ["./src/common/*"],
+        "server/*": ["./src/*"],
+        "client/*": ["./src/client/*"],
+        "codegen/*": ["./src/codegen/*"],
+    }
   },
   "exclude": ["node_modules", "dist"]
 }
