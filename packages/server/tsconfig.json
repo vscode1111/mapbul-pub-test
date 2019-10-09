@@ -11,11 +11,7 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
-      "*": ["types/*"],
-        "common/*": ["./src/common/*"],
-        "server/*": ["./src/*"],
-        "client/*": ["./src/client/*"],
-        "codegen/*": ["./src/codegen/*"],
+      "server/*": ["./src/*"],
     }
   },
   "exclude": ["node_modules", "dist"]

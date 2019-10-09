@@ -21,6 +21,7 @@ async function bootstrap() {
   app.setViewEngine('hbs');
 
   await app.listen(port);
+
   if (module.hot) {
     module.hot.accept();
     module.hot.dispose(() => app.close());
