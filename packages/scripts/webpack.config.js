@@ -1,5 +1,4 @@
 const path = require('path')
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   target: "node",
@@ -11,13 +10,12 @@ module.exports = {
     path: path.resolve(__dirname, 'lib'),
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'Codegen',
+    library: 'Connector',
     umdNamedDefine: true,
     globalObject: 'this'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-    plugins: [new TsconfigPathsPlugin({ /*configFile: "./path/to/tsconfig.json" */ })]
+    extensions: ['.ts', '.tsx', '.js']
   },
   // devtool: 'source-map',
   optimization: {
