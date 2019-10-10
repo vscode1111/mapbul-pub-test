@@ -2,7 +2,7 @@ if (process.env.NODE_ENV !== 'development') {
   require('module-alias/register');
   console.log('module-alias/register');
 }
-import { setEnvVariables } from 'common/serverConfig';
+import { setEnvVariables } from '@mapbul-pub/common';
 setEnvVariables(__dirname + '/.env');
 
 import { generateController } from 'codegen/generateController';
