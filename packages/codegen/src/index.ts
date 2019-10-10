@@ -1,7 +1,7 @@
-if (process.env.NODE_ENV !== 'development') {
-  require('module-alias/register');
-  console.log('module-alias/register');
-}
+// if (process.env.NODE_ENV !== 'development') {
+//   require('module-alias/register');
+//   console.log('module-alias/register');
+// }
 import { setEnvVariables } from '@mapbul-pub/common';
 setEnvVariables(__dirname + '/.env');
 

@@ -10,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'lib'),
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'Connector',
+    library: 'Scripts',
     umdNamedDefine: true,
     globalObject: 'this'
   },

@@ -3,6 +3,7 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
+
 module.exports = {
   target: 'node',
   mode: 'production',
@@ -24,7 +25,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    plugins: [new TsconfigPathsPlugin({ /*configFile: "./path/to/tsconfig.json" */ })]
+    plugins: [new TsconfigPathsPlugin({ })]
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   optimization: {
