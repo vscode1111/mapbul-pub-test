@@ -1,5 +1,5 @@
 import { Controller, Get, Render } from '@nestjs/common';
-import { readRouterSync } from 'codegen/routerStorage';
+import { readRouterSync } from '@mapbul-pub/codegen';
 
 @Controller('api')
 export class ApiController {

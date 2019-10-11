@@ -8,6 +8,7 @@
     "clean": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
     "build": "rimraf dist && webpack",
+    "build:lerna": "lerna run build --scope={@mapbul-pub/codegen,@mapbul-pub/server}",
     "build:tsc": "rimraf dist && tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
@@ -20,10 +21,10 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "test:e2e2": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json"  
   },
   "dependencies": {
+    "@mapbul-pub/codegen": "^1.0.0",
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",
