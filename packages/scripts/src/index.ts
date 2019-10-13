@@ -1,18 +1,18 @@
 // export * from './buildServer'
 // export * from './deployServer'
-import { test } from '@mapbul-pub/common';
+import { test, sleep } from '@mapbul-pub/common';
 
 // import { test } from 'common'
 // import { test } from '../../common'
 // import { test } from '../../common/src'
 
-const sleep = (ms: number) => {
-  return new Promise(resolve => setTimeout(resolve, ms));
-};
+// const sleep = (ms: number) => {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// };
 
 export const main = async () => {
   await sleep(500);
-  console.log('starting');
+  console.log('starting2');
 
   test();
   const t = 79;

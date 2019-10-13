@@ -10,7 +10,6 @@
     "sourceMap": true,
     "outDir": "./lib",
     "baseUrl": "./",
-    "incremental": true,
     "paths": {
       "codegen/*": ["./src/*"],
     }
