@@ -1,5 +1,8 @@
-export const setEnvVariables = (path: string) => {
-  require('dotenv').config({ path });
+export let serverConfig: IServerConfig;
+
+export const setEnvVariables = (path: string): IServerConfig => {
+  const result = require('dotenv').config({ path });
+  // console.log(result);
   serverConfig = {
     isProduction: process.env.NODE_ENV !== 'development',
     dbConnection: {
@@ -9,8 +12,10 @@ export const setEnvVariables = (path: string) => {
       database: process.env.DB_DATABASE,
     },
   };
+  return serverConfig;
 };
 
+export const getServerConfig = (): IServerConfig => serverConfig;
 
 export interface IServerConfig {
   isProduction: boolean;
@@ -21,5 +26,3 @@ export interface IServerConfig {
     database: string;
   };
 }
-
-export let serverConfig: IServerConfig;

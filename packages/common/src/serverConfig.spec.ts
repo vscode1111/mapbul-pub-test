@@ -1,8 +1,16 @@
+import appRootPath from 'app-root-path';
+import { setEnvVariables } from '.';
+
 describe('serverConfig', () => {
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      console.log('test');
-      // expect(appController.getHello()).toBe('Hello World! 8');
+    it('setEnvVariables method', () => {
+      const path = `${appRootPath}/.env`;
+      const serverConfig = setEnvVariables(path);
+      expect(serverConfig.isProduction).toBe(true);
+      expect(serverConfig.dbConnection.host).toBe('localhost');
+      expect(serverConfig.dbConnection.user).toBe('root');
+      expect(serverConfig.dbConnection.password).toBe('461301+MY');
+      expect(serverConfig.dbConnection.database).toBe('mapbul');
     });
   });
 });
