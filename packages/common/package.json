@@ -29,9 +29,6 @@
     "@types/fs-extra": "^8.0.0",
     "@types/mkdirp": "^0.5.2",
     "cross-env": "^6.0.0",
-    "dotenv": "^8.1.0",
-    "fs": "0.0.1-security",
-    "fs-extra": "^8.1.0",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
     "ts-loader": "^6.2.0",
@@ -41,6 +38,10 @@
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "fs-extra": "^8.1.0",
+    "dotenv": "^8.1.0"
+  },
   "gitHead": "165f7993c2acc907c653c02847fb02721052c6e7"
 }

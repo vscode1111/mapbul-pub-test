@@ -2,8 +2,11 @@
 //   require('module-alias/register');
 //   console.log('module-alias/register');
 // }
-// import { setEnvVariables } from '@mapbul-pub/common';
-// setEnvVariables(__dirname + '/.env');
+import appRootPath from 'app-root-path';
+import { setEnvVariables } from '@mapbul-pub/common';
+const path = `${appRootPath}/.env'`;
+console.log(path);
+setEnvVariables(path);
 
 import { generateController } from 'codegen/generateController';
 import { deleteRouterSync } from 'codegen/routerStorage';
@@ -11,10 +14,10 @@ import { sleep } from '@mapbul-pub/common';
 
 export const generateControllers = async () => {
   console.log('test');
-  // await sleep(1000);
+  await sleep(1000);
   const t0 = new Date();
   deleteRouterSync();
-  // await generateController('admin', 'admin', 'admins');
+  await generateController('admin', 'admin', 'admins');
   // await generateController('article', 'article', 'articles');
   // await generateController('articlesubcategory', 'articleSubcategory', 'articleSubcategories');
   // await generateController('category', 'category', 'categories');
