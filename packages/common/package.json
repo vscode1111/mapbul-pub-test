@@ -6,7 +6,7 @@
     "clean": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
     "build": "npm run clean && webpack",
-    "test": "mocha --require ./babel-polyfill.js test/**/*.spec.ts"
+    "test": "jest"
   },
   "keywords": [
     "tourism",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/fs-extra": "^8.0.0",
     "@types/mkdirp": "^0.5.2",
+    "@types/jest": "^24.0.11",
     "cross-env": "^6.0.0",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
@@ -36,12 +37,31 @@
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.4.3",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2"
   },
   "dependencies": {
     "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
     "dotenv": "^8.1.0"
   },
-  "gitHead": "165f7993c2acc907c653c02847fb02721052c6e7"
+  "gitHead": "165f7993c2acc907c653c02847fb02721052c6e7",
+  "jest": {
+    "rootDir": ".",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "server/(.*)": "<rootDir>/src/$1"
+    }
+  }
 }

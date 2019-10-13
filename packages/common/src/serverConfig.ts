@@ -11,6 +11,7 @@ export const setEnvVariables = (path: string) => {
   };
 };
 
+
 export interface IServerConfig {
   isProduction: boolean;
   dbConnection: {
