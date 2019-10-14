@@ -1,4 +1,5 @@
 import appRootPath from 'app-root-path';
+import * as path from 'path';
 import { getFields } from 'codegen/getFields';
 import { createSorce } from 'codegen/generateSource';
 import { appendRouterSync } from 'codegen/routerStorage';
@@ -15,8 +16,9 @@ export const generateController = async (tableName: string, dto: string, service
   const filePrefixDTO = dto;
   const filePrefix = `${service[0].toLowerCase()}${service.slice(1)}`;
 
-  const templateRootPath = `${appRootPath.path}/src/codegen/templates`;
-  const sourceRootPath = `${appRootPath.path}/src/server`;
+  const templateRootPath = `${appRootPath.path}/src/templates`;
+  // const sourceRootPath = `${appRootPath.path}/src/server`;
+  const sourceRootPath = path.join(appRootPath.path, '..', '/server/src');
 
   const fields = await getFields(tableName);
 

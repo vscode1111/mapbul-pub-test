@@ -1,5 +1,11 @@
+import appRootPath from 'app-root-path';
+import { setEnvVariables } from '@mapbul-pub/common';
+const path = `${appRootPath}/.env`;
+console.log(path);
+setEnvVariables(path);
+
 import { generateControllers } from 'codegen/generateControllers';
-import { sleep } from "@mapbul-pub/common"
+// import { sleep } from '@mapbul-pub/common';
 
 export * from './generateControllers';
 export * from './routerStorage';

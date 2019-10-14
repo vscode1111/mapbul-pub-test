@@ -1,10 +1,9 @@
 import * as mysql from 'mysql';
 import * as util from 'util';
 import { Connection } from 'mysql';
-import { serverConfig } from '@mapbul-pub/common';
 import { IField } from 'codegen/IField';
-console.log(serverConfig);
-const connection: Connection = mysql.createConnection(serverConfig.dbConnection);
+import { getServerConfig } from '@mapbul-pub/common';
+const connection: Connection = mysql.createConnection(getServerConfig().dbConnection);
 const query: (expression: string) => Promise<any> = util.promisify(connection.query).bind(connection);
 
 interface IDescribeRowData {
