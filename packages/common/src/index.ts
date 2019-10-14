@@ -4,5 +4,5 @@ export * from './timeUtils';
 export * from './serverConfig';
 
 export const test = () => {
-  console.log('test 2323---');
+  console.log('test 2323');
 };

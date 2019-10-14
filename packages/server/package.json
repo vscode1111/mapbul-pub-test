@@ -25,6 +25,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@mapbul-pub/common": "^1.0.0",
     "@mapbul-pub/codegen": "^1.0.0",
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",

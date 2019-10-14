@@ -10,6 +10,11 @@ import { generateControllers } from 'codegen/generateControllers';
 export * from './generateControllers';
 export * from './routerStorage';
 
+export const test = () => {
+  console.log('test 2323-');
+};
+
+
 // generateControllers();
 
 // export const main = async () => {

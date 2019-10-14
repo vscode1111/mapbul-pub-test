@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "lib",
     "rootDir": "src",
+    "esModuleInterop": false,
     "paths": {
       "@mapbul-pub/common": ["./packages/common/src"],
     }  
