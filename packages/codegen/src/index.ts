@@ -10,7 +10,7 @@ import { generateControllers } from 'codegen/generateControllers';
 export * from './generateControllers';
 export * from './routerStorage';
 
-generateControllers();
+// generateControllers();
 
 // export const main = async () => {
 //   await sleep(1000);

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
@@ -17,6 +18,6 @@
       "es7",
       "dom"
     ],
-    "baseUrl": "./",
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
