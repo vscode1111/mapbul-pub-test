@@ -5,6 +5,7 @@
     "rootDir": "src",
     "paths": {
       "@mapbul-pub/codegen2": ["./packages/codegen2/src"],
+      "codegen/*": ["./packages/codegen2/src/*"],
     }  
   },
   "include": ["./src/**/*"]
