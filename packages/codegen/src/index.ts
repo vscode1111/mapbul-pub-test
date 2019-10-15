@@ -1,3 +1,8 @@
+export const codegenTest = () => {
+  console.log('test 2323-');
+};
+
+
 import appRootPath from 'app-root-path';
 import { setEnvVariables } from '@mapbul-pub/common';
 const path = `${appRootPath}/.env`;
@@ -10,9 +15,6 @@ import { generateControllers } from 'codegen/generateControllers';
 export * from './generateControllers';
 export * from './routerStorage';
 
-export const test = () => {
-  console.log('test 2323-');
-};
 
 
 // generateControllers();

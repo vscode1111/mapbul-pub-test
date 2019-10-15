@@ -13,11 +13,14 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 
 import { test, sleep } from '@mapbul-pub/common';
+import { codegenTest } from '@mapbul-pub/codegen';
+
 
 declare const module: any;
 
 async function bootstrap() {
   test();
+  codegenTest();
   const port = process.env.PORT || 3200;
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.setBaseViewsDir(join(__dirname, 'views'));
