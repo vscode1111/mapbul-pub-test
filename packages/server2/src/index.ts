@@ -1,7 +1,8 @@
-import { test, sleep } from '@mapbul-pub/codegen2';
+
+import { test } from '@mapbul-pub/codegen2';
 
 export const main = async () => {
-  await sleep(500);
+  // await sleep(500);
   console.log('starting2');
 
   test();

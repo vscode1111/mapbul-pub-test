@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
-    "build": "npm run clean && webpack",
+    "build": "ncp tsconfig.build.json tsconfig.json && npm run clean && webpack",
+    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6589 --respawn src/index.ts",
     "test": "jest"
   },
   "keywords": [
@@ -43,6 +44,7 @@
     "ts-jest": "^24.0.2"
   },
   "dependencies": {
+    "@mapbul-pub/common": "^1.0.0",
     "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
     "dotenv": "^8.1.0",

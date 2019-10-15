@@ -1,8 +1,12 @@
-export * from './fileUtils';
-export * from './processUtils';
-export * from './timeUtils';
-export * from './serverConfig';
+import { sleep } from '@mapbul-pub/common';
 
 export const test = () => {
-  console.log('test 1235=+');
+  console.log('test 1235=+++');
 };
+
+const main = async () => {
+  await sleep(500);
+  console.log('test');
+};
+
+main();
