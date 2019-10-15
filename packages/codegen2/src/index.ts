@@ -1,3 +1,5 @@
+export * from './routerStorage';
+
 import { sleep } from '@mapbul-pub/common';
 
 export const test = () => {
