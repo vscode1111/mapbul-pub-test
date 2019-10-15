@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "esModuleInterop": false,
-    "outDir": "./dist",
+    "outDir": "dist",
     "baseUrl": "./",
     "paths": {
       "server/*": ["./src/*"],

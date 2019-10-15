@@ -20,7 +20,7 @@ declare const module: any;
 
 async function bootstrap() {
   test();
-  codegenTest();
+  // codegenTest();
   const port = process.env.PORT || 3200;
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.setBaseViewsDir(join(__dirname, 'views'));
