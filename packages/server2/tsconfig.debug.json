@@ -3,7 +3,6 @@
   "compilerOptions": {
     "outDir": "lib",
     "rootDir": "src",
-    "esModuleInterop": false,
     "paths": {
       "@mapbul-pub/codegen2": ["./packages/codegen2/src"],
     }  
