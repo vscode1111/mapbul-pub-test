@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Core Library for WalletConnect",
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf dist",
     "clean:node_modules": "rimraf node_modules",
-    "build": "ncp tsconfig.build.json tsconfig.json && npm run clean && webpack",
-    "build:lerna": "lerna run build --scope={@mapbul-pub/common,@mapbul-pub/scripts}",
-    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6589 --respawn src/index.ts",
+    "build": "ncp tsconfig.build.json tsconfig.json && rimraf dist && webpack",
+    "build:lerna": "lerna run build --scope={@mapbul-pub/codegen,@mapbul-pub/server}",
+    "build:tsc": "rimraf dist && tsc -p tsconfig.build.json",
+    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6589 --respawn src/main.ts",
     "start": "node -e 'require(\"./lib/index\").main()'",
     "test": "mocha --require ./babel-polyfill.js test/**/*.spec.ts"
   },

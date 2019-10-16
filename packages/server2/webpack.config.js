@@ -3,11 +3,10 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-
 module.exports = {
   target: 'node',
   mode: 'production',
-  entry: ['webpack/hot/poll?100', './src/index.ts'],
+  entry: ['webpack/hot/poll?100', './src/main.ts'],
   // watch: true,
   externals: [
     nodeExternals({
@@ -25,14 +24,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    plugins: [new TsconfigPathsPlugin({ })]
+    plugins: [new TsconfigPathsPlugin({ /*configFile: "./path/to/tsconfig.json" */ })]
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   optimization: {
     minimize: true
   },
   output: {
-    path: path.join(__dirname, 'lib'),
-    filename: 'index.js',
+    path: path.join(__dirname, 'dist'),
+    filename: 'server.js',
   },
 };
