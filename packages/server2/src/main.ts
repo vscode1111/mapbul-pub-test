@@ -2,6 +2,7 @@
 import { test } from '@mapbul-pub/codegen2';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from 'server/app.module';
+import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 
 export const main = async () => {
@@ -15,6 +16,8 @@ export const main = async () => {
 };
 
 main();
+
+declare const module: any;
 
 async function bootstrap() {
   test();
