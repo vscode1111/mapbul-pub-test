@@ -1,15 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
+    // "baseUrl": "./",
     "outDir": "dist",
-    // "rootDir": "src",
+    "rootDir": "src",
     "paths": {
       "@mapbul-pub/codegen2": ["./packages/codegen2/src"],
       "@mapbul-pub/common": ["./packages/common/src"],
       "@mapbul-pub/codegen": ["./packages/codegen/src"],
       "codegen/*": ["./packages/codegen2/src/*"],
-      "server/*": ["./src/*"],
+      "server/*": ["./*"],
     }  
   },
   //"include": ["./src/**/*"]

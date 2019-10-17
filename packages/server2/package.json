@@ -10,7 +10,7 @@
     "build": "ncp tsconfig.build.json tsconfig.json && rimraf dist && webpack",
     "build:lerna": "lerna run build --scope={@mapbul-pub/codegen,@mapbul-pub/server}",
     "build:tsc": "rimraf dist && tsc -p tsconfig.build.json",
-    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6589 --respawn src/main.ts",
+    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6590 --respawn src/main.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
