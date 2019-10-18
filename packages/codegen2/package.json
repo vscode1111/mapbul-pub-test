@@ -6,7 +6,7 @@
     "clean": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
     "build": "ncp tsconfig.build.json tsconfig.json && npm run clean && webpack",
-    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6589 --respawn src/index.ts",
+    "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6591 --respawn src/index.ts",
     "test": "jest"
   },
   "keywords": [

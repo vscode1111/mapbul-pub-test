@@ -1,8 +1,8 @@
 
 import { test } from '@mapbul-pub/codegen2';
 import { NestFactory } from '@nestjs/core';
-// import { AppModule } from 'server/app.module';
-import { AppModule } from './app.module';
+import { AppModule } from 'server/app.module';
+// import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 
@@ -21,7 +21,7 @@ main();
 declare const module: any;
 
 async function bootstrap() {
-  test();
+  // test();
   // codegenTest();
   const port = process.env.PORT || 3200;
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
