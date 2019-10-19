@@ -9,6 +9,7 @@
     "build:lerna": "lerna run build --scope={@mapbul-pub/common,@mapbul-pub/scripts}",
     "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6592 --respawn src/index.ts",
     "start": "node -e 'require(\"./lib/index\").main()'",
+    "start2": "node ./lib/index",
     "test": "mocha --require ./babel-polyfill.js test/**/*.spec.ts"
   },
   "keywords": [
