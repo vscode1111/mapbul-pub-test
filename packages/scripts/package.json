@@ -6,6 +6,7 @@
     "clean": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
     "build": "ncp tsconfig.build.json tsconfig.json && npm run clean && webpack",
+    "build:tsc": "npm run clean && tsc",
     "build:lerna": "lerna run build --scope={@mapbul-pub/common,@mapbul-pub/scripts}",
     "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6592 --respawn src/index.ts",
     "start": "node -e 'require(\"./lib/index\").main()'",

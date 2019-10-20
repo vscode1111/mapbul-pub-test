@@ -4,5 +4,7 @@ export * from './timeUtils';
 export * from './serverConfig';
 
 export const test = () => {
-  console.log('test 1235++++');
+  console.log('test 12356+++');
 };
+
+console.log('index');

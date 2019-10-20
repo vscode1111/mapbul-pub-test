@@ -10,11 +10,11 @@ import { func } from 'scripts/func';
 
 export const main = async () => {
   await sleep(500);
-  console.log('starting2');
+  console.log('starting3');
 
   test();
   func();
-  const t = 79;
+  const t = 80;
   console.log(t);
   console.log(t);
 };
