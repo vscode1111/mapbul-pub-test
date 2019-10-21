@@ -3,16 +3,12 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-
 module.exports = {
   target: 'node',
   mode: 'production',
-  entry: ['webpack/hot/poll?100', './src/index.ts'],
   // watch: true,
   externals: [
-    nodeExternals({
-      whitelist: ['webpack/hot/poll?100'],
-    }),
+    nodeExternals(),
   ],
   module: {
     rules: [

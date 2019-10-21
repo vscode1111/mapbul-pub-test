@@ -1,6 +1,6 @@
 import appRootPath from 'app-root-path';
 import { setEnvVariables } from '@mapbul-pub/common';
-const path = `${appRootPath}/.env`;
+const path = `${appRootPath.path}/.env`;
 console.log(path);
 setEnvVariables(path);
 
