@@ -1,0 +1,69 @@
+{
+  "name": "@mapbul-pub/codegen3",
+  "version": "1.0.0",
+  "description": "Core Library for WalletConnect",
+  "scripts": {
+    "clean": "rimraf lib",
+    "clean:node_modules": "rimraf node_modules",
+    "build": "npm run clean && webpack",
+    "test": "jest"
+  },
+  "keywords": [
+    "tourism",
+    "bali"
+  ],
+  "author": "Biskub Konstantin <scub111@mail.ru>",
+  "homepage": "https://scub111.com",
+  "license": "LGPL-3.0",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/fs-extra": "^8.0.0",
+    "@types/mkdirp": "^0.5.2",
+    "@types/jest": "^24.0.11",
+    "cross-env": "^6.0.0",
+    "mkdirp": "^0.5.1",
+    "path": "^0.12.7",
+    "ts-loader": "^6.2.0",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.4.3",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "fs-extra": "^8.1.0",
+    "dotenv": "^8.1.0",
+    "app-root-path": "^2.2.1"
+  },
+  "gitHead": "165f7993c2acc907c653c02847fb02721052c6e7",
+  "jest": {
+    "rootDir": ".",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "server/(.*)": "<rootDir>/src/$1"
+    }
+  }
+}

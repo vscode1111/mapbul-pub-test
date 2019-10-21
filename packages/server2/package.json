@@ -27,6 +27,7 @@
   "dependencies": {
     "@mapbul-pub/common": "^1.0.0",
     "@mapbul-pub/codegen2": "^1.0.0",
+    "@mapbul-pub/codegen3": "^1.0.0",
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",

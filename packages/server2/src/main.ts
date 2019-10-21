@@ -1,5 +1,6 @@
 
-import { test } from '@mapbul-pub/codegen2';
+// import { test } from '@mapbul-pub/codegen2';
+import { test } from '@mapbul-pub/codegen3';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from 'server/app.module';
 // import { AppModule } from './app.module';
