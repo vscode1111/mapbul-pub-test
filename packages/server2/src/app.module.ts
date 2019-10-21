@@ -50,7 +50,7 @@ import { AppController } from './app.controller';
 // import { WeekDaysController } from 'server/api/weekdays/weekdays.controller';
 // import { WorkTimesService } from 'server/api/worktimes/worktimes.service';
 // import { WorkTimesController } from 'server/api/worktimes/worktimes.controller';
-// import { ApiController } from 'server/api.controller';
+import { ApiController } from 'server/api.controller';
 
 @Module({
   imports: [],
@@ -84,7 +84,7 @@ import { AppController } from './app.controller';
   ],
   controllers: [
     AppController,
-    // ApiController,
+    ApiController,
     // CountryPermissionsController,
     // AdminsController,
     // ArticlesController,
