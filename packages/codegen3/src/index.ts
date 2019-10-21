@@ -9,4 +9,4 @@ export const test = () => {
   console.log('test 12356+++');
 };
 
-console.log('index from codegen3.1');
+console.log('index from codegen 3.3');

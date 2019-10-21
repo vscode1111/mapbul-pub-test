@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    // "rootDir": "src",
+    "outDir": "lib",
+    "paths": {
+      "@mapbul-pub/common": ["./packages/common/src"],
+      // "codegen/*": ["./packages/codegen2/src/*"],
+      "codegen/*": ["./src/*"],
+    }  
+  },
+  // "include": ["./src/**/*"]
+}
