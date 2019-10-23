@@ -1,11 +1,19 @@
 
 // import { test } from '@mapbul-pub/codegen2';
+import appRootPath from 'app-root-path';
 import { test } from '@mapbul-pub/codegen3';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from 'server/app.module';
 // import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
+
+import { setEnvVariables, serverConfig, getServerConfig } from '@mapbul-pub/common';
+const path = `${appRootPath}/.env`;
+// const path = __dirname + '/.env';
+console.log(path);
+setEnvVariables(__dirname + '/.env');
+console.log(serverConfig, getServerConfig());
 
 export const main = async () => {
   // await sleep(500);

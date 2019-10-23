@@ -1,16 +1,22 @@
 import appRootPath from 'app-root-path';
-import { setEnvVariables } from '.';
+import { setEnvVariables, IServerConfig } from '.';
 
 describe('serverConfig', () => {
   describe('root', () => {
     it('setEnvVariables method', () => {
       const path = `${appRootPath}/.env`;
       const serverConfig = setEnvVariables(path);
-      expect(serverConfig.isProduction).toBe(true);
-      expect(serverConfig.dbConnection.host).toBe('localhost');
-      expect(serverConfig.dbConnection.user).toBe('root');
-      expect(serverConfig.dbConnection.password).toBe('461301+MY');
-      expect(serverConfig.dbConnection.database).toBe('mapbul');
+      const expected: IServerConfig = {
+        isProduction: true,
+        dbConnection:
+        {
+          host: 'localhost',
+          user: 'root',
+          password: '461301+MY',
+          database: 'mapbul',
+        }
+      };
+      expect(serverConfig).toEqual(expected);
     });
   });
 });

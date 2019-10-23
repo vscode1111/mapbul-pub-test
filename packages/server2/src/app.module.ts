@@ -3,8 +3,8 @@ import { AppService } from './app.service';
 import { AppController } from './app.controller';
 // import { AdminsService } from 'server/api/admins/admins.service';
 // import { AdminsController } from 'server/api/admins/admins.controller';
-// import { ArticlesService } from 'server/api/articles/articles.service';
-// import { ArticlesController } from 'server/api/articles/articles.controller';
+import { ArticlesService } from 'server/api/articles/articles.service';
+import { ArticlesController } from 'server/api/articles/articles.controller';
 // import { ArticleSubcategoriesService } from 'server/api/articleSubcategories/articleSubcategories.service';
 // import { ArticleSubcategoriesController } from 'server/api/articleSubcategories/articleSubcategories.controller';
 // import { CategoriesService } from 'server/api/categories/categories.service';
@@ -58,7 +58,7 @@ import { ApiController } from 'server/api.controller';
     AppService,
     // CountryPermissionsService,
     // AdminsService,
-    // ArticlesService,
+    ArticlesService,
     // ArticleSubcategoriesService,
     // CategoriesService,
     // CitiesService,
@@ -87,7 +87,7 @@ import { ApiController } from 'server/api.controller';
     ApiController,
     // CountryPermissionsController,
     // AdminsController,
-    // ArticlesController,
+    ArticlesController,
     // ArticleSubcategoriesController,
     // CategoriesController,
     // CitiesController,

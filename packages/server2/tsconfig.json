@@ -6,9 +6,9 @@
     // "rootDir": ".",
     // "esModuleInterop": false,
     "paths": {
+      "@mapbul-pub/common": ["./packages/common/src"],
       "@mapbul-pub/codegen2": ["./packages/codegen2/src"],
       "@mapbul-pub/codegen3": ["./packages/codegen3/src"],
-      // "@mapbul-pub/common": ["./packages/common/src"],
       // "@mapbul-pub/codegen": ["./packages/codegen/src"],
       "codegen/*": ["./packages/codegen2/src/*"],
       "server/*": ["./packages/server2/src/*"],

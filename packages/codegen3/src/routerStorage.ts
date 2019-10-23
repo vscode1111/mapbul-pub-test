@@ -11,7 +11,7 @@ export const deleteRouterSync = () => {
 };
 
 export const readRouterSync = () => {
-  console.log('readRouterSync2');
+  console.log('readRouterSync3');
   return readFileSync(apiPath);
 };
 
