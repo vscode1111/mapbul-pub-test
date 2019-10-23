@@ -8,12 +8,13 @@ import { AppModule } from 'server/app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 
-import { setEnvVariables, serverConfig, getServerConfig } from '@mapbul-pub/common';
+import { GlobalVar } from '@mapbul-pub/common';
+// import * as variable from '@mapbul-pub/common';
 const path = `${appRootPath}/.env`;
 // const path = __dirname + '/.env';
 console.log(path);
-setEnvVariables(__dirname + '/.env');
-console.log(serverConfig, getServerConfig());
+GlobalVar.setup(path);
+console.log(GlobalVar.env);
 
 export const main = async () => {
   // await sleep(500);

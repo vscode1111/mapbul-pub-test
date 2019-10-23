@@ -3,15 +3,13 @@ import * as util from 'util';
 import { BaseService } from 'server/common/BaseService';
 import { Connection } from 'mysql';
 import { TID } from 'server/common/types';
-// import { serverConfig } from 'common/serverConfig';
-import { serverConfig, getServerConfig } from '@mapbul-pub/common';
+import { GlobalVar } from '@mapbul-pub/common';
 import { IArticleDTO } from './article.dto';
 
 export class ArticlesService extends BaseService<IArticleDTO> {
   constructor() {
     super();
-    // this.connection = mysql.createConnection(serverConfig.dbConnection);
-    this.connection = mysql.createConnection(getServerConfig().dbConnection);
+    this.connection = mysql.createConnection(GlobalVar.env.dbConnection);
     this.query = util.promisify(this.connection.query).bind(this.connection);
   }
 

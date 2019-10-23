@@ -1,9 +1,9 @@
 import appRootPath from 'app-root-path';
-import { setEnvVariables } from '@mapbul-pub/common';
+import { GlobalVar } from '@mapbul-pub/common';
 // console.log(appRootPath);
 const path = `${appRootPath}/.env`;
 console.log(path);
-setEnvVariables(path);
+GlobalVar.setup(path);
 
 export * from './routerStorage';
 export * from './generateControllers';
