@@ -8,7 +8,6 @@ export interface IServerConfig {
   };
 }
 
-
 class GlobalVarClass {
   public env: IServerConfig;
 
@@ -29,4 +28,3 @@ class GlobalVarClass {
 }
 
 export const GlobalVar = new GlobalVarClass();
-// export default Variable;

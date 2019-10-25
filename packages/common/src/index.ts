@@ -6,5 +6,3 @@ export * from './serverConfig';
 export const test = () => {
   console.log('test 12356+++');
 };
-
-console.log('index');

@@ -1,11 +1,11 @@
 import appRootPath from 'app-root-path';
-import { setEnvVariables, IServerConfig } from '.';
+import { GlobalVar, IServerConfig } from '.';
 
 describe('serverConfig', () => {
   describe('root', () => {
     it('setEnvVariables method', () => {
       const path = `${appRootPath}/.env`;
-      const serverConfig = setEnvVariables(path);
+      const serverConfig = GlobalVar.setup(path);
       const expected: IServerConfig = {
         isProduction: true,
         dbConnection:
