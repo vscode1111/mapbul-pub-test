@@ -28,7 +28,7 @@ export const main = async () => {
 
 main();
 
-declare const module: any;
+// declare const module: any;
 
 async function bootstrap() {
   // test();
@@ -40,10 +40,10 @@ async function bootstrap() {
 
   await app.listen(port);
 
-  if (module.hot) {
-    module.hot.accept();
-    module.hot.dispose(() => app.close());
-  }
+  // if (module.hot) {
+  //   module.hot.accept();
+  //   module.hot.dispose(() => app.close());
+  // }
   console.log(`Server started at http://localhost:${port}`);
 }
 bootstrap();
