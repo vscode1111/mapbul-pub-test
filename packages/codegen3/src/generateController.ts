@@ -1,5 +1,5 @@
-import appRootPath from 'app-root-path';
 import * as path from 'path';
+import appRootPath from 'app-root-path';
 import { getFields } from 'codegen/getFields';
 import { createSorce } from 'codegen/generateSource';
 import { appendRouterSync } from 'codegen/routerStorage';
