@@ -6,13 +6,15 @@
 import { generateController } from 'codegen/generateController';
 import { deleteRouterSync } from 'codegen/routerStorage';
 import { sleep } from '@mapbul-pub/common';
+import { initConnection } from './getFields';
 
 export const generateControllers = async () => {
   console.log('test5');
   await sleep(1000);
   const t0 = new Date();
+  const query = initConnection();
   deleteRouterSync();
-  await generateController('admin', 'admin', 'admins');
+  await generateController(query, 'admin', 'admin', 'admins');
   // await generateController('article', 'article', 'articles');
   // await generateController('articlesubcategory', 'articleSubcategory', 'articleSubcategories');
   // await generateController('category', 'category', 'categories');
