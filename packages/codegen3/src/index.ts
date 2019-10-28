@@ -9,7 +9,7 @@ export * from './routerStorage';
 export * from './generateControllers';
 
 export const test = () => {
-  console.log('test 12');
+  console.log('test 123');
 };
 
 console.log('index from codegen 3.4');
