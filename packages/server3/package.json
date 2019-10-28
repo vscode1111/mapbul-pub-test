@@ -1,5 +1,5 @@
 {
-  "name": "server3",
+  "name": "@mapbul-pub/server3",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -21,15 +21,19 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@mapbul-pub/common": "^1.0.0",
+    "@mapbul-pub/codegen3": "^1.0.0",
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",
+    "app-root-path": "^2.2.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3"
   },
   "devDependencies": {
     "@nestjs/testing": "^6.0.0",
+    "@types/app-root-path": "^1.2.4",
     "@types/express": "4.16.1",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.4",
