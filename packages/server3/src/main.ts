@@ -1,5 +1,6 @@
 import * as appRootPath from 'app-root-path';
 import { NestFactory } from '@nestjs/core';
+// import { AppModule } from './app.module-old';
 import { AppModule } from './app.module';
 
 import { GlobalVar } from '@mapbul-pub/common';
