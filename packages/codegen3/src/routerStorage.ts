@@ -3,7 +3,7 @@ import appRootPath from 'app-root-path';
 import { removeFileSync, readFileSync, appendFileSync } from '@mapbul-pub/common';
 
 // const apiPath = `${appRootPath.path}/src/server/api.txt`;
-const apiPath = path.join(appRootPath.path, '..', 'server/api.txt');
+const apiPath = path.join(appRootPath.path, '..', 'server3/api.txt');
 console.log(apiPath);
 
 export const deleteRouterSync = () => {

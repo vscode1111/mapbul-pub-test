@@ -4,6 +4,8 @@ import { Connection } from 'mysql';
 import { IField } from 'codegen/IField';
 import { GlobalVar } from '@mapbul-pub/common';
 
+let connection: Connection;
+
 export type queryFn = (expression: string) => Promise<any>;
 
 interface IDescribeRowData {
@@ -32,10 +34,16 @@ const traslateType = (type: string) => {
 };
 
 export const initConnection = () => {
-  const connection: Connection = mysql.createConnection(GlobalVar.env.dbConnection);
+  connection = mysql.createConnection(GlobalVar.env.dbConnection);
   const query: queryFn = util.promisify(connection.query).bind(connection);
   return query;
-}
+};
+
+export const closeConnection = () => {
+  if (connection) {
+    connection.destroy();
+  }
+};
 
 export const getFields = async (query: queryFn, tableName: string) => {
   const result: any[] = await query(`DESCRIBE ${tableName}`);

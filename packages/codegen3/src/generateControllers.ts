@@ -6,22 +6,21 @@
 import { generateController } from 'codegen/generateController';
 import { deleteRouterSync } from 'codegen/routerStorage';
 import { sleep } from '@mapbul-pub/common';
-import { initConnection } from './getFields';
+import { initConnection, closeConnection } from './getFields';
 import { GlobalVar } from '@mapbul-pub/common';
 import appRootPath from 'app-root-path';
 
 export const generateControllers = async () => {
   console.log('test5');
-  await sleep(1000);
+  // await sleep(1000);
   const t0 = new Date();
-
-  const path = `${appRootPath}/.env`;
-  GlobalVar.setup(path);
+  GlobalVar.setup(`${appRootPath}/.env`);
 
   const query = initConnection();
   deleteRouterSync();
-  await generateController(query, 'admin', 'admin', 'admins');
-  // await generateController('article', 'article', 'articles');
+  // await generateController(query, 'admin', 'admin', 'admins');
+
+  await generateController(query, 'article', 'article', 'articles');
   // await generateController('articlesubcategory', 'articleSubcategory', 'articleSubcategories');
   // await generateController('category', 'category', 'categories');
   // await generateController('city', 'city', 'cities');
@@ -47,6 +46,7 @@ export const generateControllers = async () => {
   // await generateController('usertype', 'userType', 'userTypes');
   // await generateController('weekday', 'weekDay', 'weekDays');
   // await generateController('worktime', 'workTime', 'workTimes');
+  closeConnection();
   const diff = new Date().valueOf() - t0.valueOf();
   console.log(`${diff} ms`);
 };
