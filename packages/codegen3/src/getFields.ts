@@ -33,7 +33,6 @@ const traslateType = (type: string) => {
 
 export const initConnection = () => {
   const connection: Connection = mysql.createConnection(GlobalVar.env.dbConnection);
-  console.log(GlobalVar);
   const query: queryFn = util.promisify(connection.query).bind(connection);
   return query;
 }
