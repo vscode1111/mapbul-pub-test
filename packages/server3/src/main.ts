@@ -16,7 +16,8 @@ console.log(GlobalVar.env);
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const port = process.env.PORT || 3200;
-  const viewPath = join(__dirname, 'views');
+  // const viewPath = join(__dirname, 'views');
+  const viewPath = join(appRootPath.path, 'views');
   console.log(viewPath);
   app.setBaseViewsDir(viewPath);
   app.setViewEngine('hbs');
