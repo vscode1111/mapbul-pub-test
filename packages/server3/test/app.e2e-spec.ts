@@ -30,9 +30,13 @@ describe('AppController (e2e)', () => {
       .expect(200);
   };
 
-  // it('/ (GET)', () => {
-  //   return check('/').expect('Hello World!');
-  // });
+  it('/ (GET)', () => {
+    return check('/').expect('Hello World!');
+  });
+
+  it('/api (GET)', async () => {
+    await check('/api');
+  });
 
   it('/api/admin (GET)', async () => {
     // await check('/api/admins');
