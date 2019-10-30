@@ -49,12 +49,12 @@ import { TenantsService } from 'server/api/tenants/tenants.service';
 import { TenantsController } from 'server/api/tenants/tenants.controller';
 import { UsersService } from 'server/api/users/users.service';
 import { UsersController } from 'server/api/users/users.controller';
-import { UserTypesService } from 'server/api/usertypes/usertypes.service';
-import { UserTypesController } from 'server/api/usertypes/usertypes.controller';
-import { WeekDaysService } from 'server/api/weekdays/weekdays.service';
-import { WeekDaysController } from 'server/api/weekdays/weekdays.controller';
-import { WorkTimesService } from 'server/api/worktimes/worktimes.service';
-import { WorkTimesController } from 'server/api/worktimes/worktimes.controller';
+import { UserTypesService } from 'server/api/usertypes/userTypes.service';
+import { UserTypesController } from 'server/api/usertypes/userTypes.controller';
+import { WeekDaysService } from 'server/api/weekdays/weekDays.service';
+import { WeekDaysController } from 'server/api/weekdays/weekDays.controller';
+import { WorkTimesService } from 'server/api/worktimes/workTimes.service';
+import { WorkTimesController } from 'server/api/worktimes/workTimes.controller';
 import { ApiController } from 'server/api.controller';
 
 @Module({
