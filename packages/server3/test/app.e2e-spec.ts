@@ -3,6 +3,7 @@ import * as appRootPath from 'app-root-path';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppModule } from './../src/app.module';
 import { GlobalVar } from '@mapbul-pub/common';
+import { readRouterSync } from '@mapbul-pub/codegen3';
 
 describe('AppController (e2e)', () => {
   let app;
@@ -33,10 +34,20 @@ describe('AppController (e2e)', () => {
   //   return check('/').expect('Hello World!');
   // });
 
-  it('/api/articles (GET)', async () => {
-    await check('/api/articles');
-    // const response = await check('/api');
-    // console.log(response);
-    // return check('/api/articles');
+  it('/api/admin (GET)', async () => {
+    // await check('/api/admins');
+    const apiText = readRouterSync();
+    const apiInits = apiText.split(/\r?\n/);
+    apiInits.forEach(async (item: string) => {
+      if (item !== '') {
+        const url = `/${item.trim()}`;
+        try {
+          await check(`${url}`);
+        } catch (e) {
+          // console.log(item, e);
+          console.log(`Error in ${url}`);
+        }
+      }
+    });
   });
 });

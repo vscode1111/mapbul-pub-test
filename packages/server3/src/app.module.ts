@@ -11,12 +11,16 @@ import { CategoriesService } from 'server/api/categories/categories.service';
 import { CategoriesController } from 'server/api/categories/categories.controller';
 import { CitiesService } from 'server/api/cities/cities.service';
 import { CitiesController } from 'server/api/cities/cities.controller';
+import { CountriesService } from 'server/api/countries/countries.service';
+import { CountriesController } from 'server/api/countries/countries.controller';
 import { CityPermissionsService } from 'server/api/cityPermissions/cityPermissions.service';
 import { CityPermissionsController } from 'server/api/cityPermissions/cityPermissions.controller';
 import { CountryPermissionsService } from 'server/api/countryPermissions/countryPermissions.service';
 import { CountryPermissionsController } from 'server/api/countryPermissions/CountryPermissions.controller';
 import { DiscountsService } from 'server/api/discounts/discounts.service';
 import { DiscountsController } from 'server/api/discounts/discounts.controller';
+import { EditorsService } from 'server/api/editors/editors.service';
+import { EditorsController } from 'server/api/editors/editors.controller';
 import { FavoritesArticlesService } from 'server/api/favoritesArticles/favoritesArticles.service';
 import { FavoritesArticlesController } from 'server/api/favoritesArticles/favoritesArticles.controller';
 import { FavoritesMarkersService } from 'server/api/favoritesMarkers/favoritesMarkers.service';
@@ -33,9 +37,10 @@ import { MarkersService } from 'server/api/markers/markers.service';
 import { MarkersController } from 'server/api/markers/markers.controller';
 import { PhonesService } from 'server/api/phones/phones.service';
 import { PhonesController } from 'server/api/phones/phones.controller';
+import { RegionsService } from 'server/api/regions/regions.service';
+import { RegionsController } from 'server/api/regions/regions.controller';
 import { RegionPermissionsService } from 'server/api/regionPermissions/regionPermissions.service';
 import { RegionPermissionsController } from 'server/api/regionPermissions/regionPermissions.controller';
-import { RegionsService } from 'server/api/regions/regions.service';
 import { StatusesService } from 'server/api/statuses/statuses.service';
 import { StatusesController } from 'server/api/statuses/statuses.controller';
 import { SubcategoriesService } from 'server/api/subcategories/subcategories.service';
@@ -56,14 +61,16 @@ import { ApiController } from 'server/api.controller';
   imports: [],
   providers: [
     AppService,
-    CountryPermissionsService,
     AdminsService,
     ArticlesService,
     ArticleSubcategoriesService,
     CategoriesService,
     CitiesService,
+    CountriesService,
+    CountryPermissionsService,
     CityPermissionsService,
     DiscountsService,
+    EditorsService,
     FavoritesArticlesService,
     FavoritesMarkersService,
     GuidesService,
@@ -72,8 +79,8 @@ import { ApiController } from 'server/api.controller';
     MarkerRequestSessionsService,
     MarkersService,
     PhonesService,
-    RegionPermissionsService,
     RegionsService,
+    RegionPermissionsService,
     StatusesService,
     SubcategoriesService,
     TenantsService,
@@ -85,14 +92,16 @@ import { ApiController } from 'server/api.controller';
   controllers: [
     AppController,
     ApiController,
-    CountryPermissionsController,
     AdminsController,
     ArticlesController,
     ArticleSubcategoriesController,
     CategoriesController,
     CitiesController,
+    CountriesController,
+    CountryPermissionsController,
     CityPermissionsController,
     DiscountsController,
+    EditorsController,
     FavoritesArticlesController,
     FavoritesMarkersController,
     GuidesController,
@@ -101,6 +110,7 @@ import { ApiController } from 'server/api.controller';
     MarkerRequestSessionsController,
     MarkersController,
     PhonesController,
+    RegionsController,
     RegionPermissionsController,
     StatusesController,
     SubcategoriesController,
