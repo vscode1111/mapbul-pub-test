@@ -19,11 +19,11 @@ export class CountriesService extends BaseService<ICountryDTO> {
   async getAll(): Promise<ICountryDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        name,
-        enName,
-        placeId,
-        code
+        \`id\`,
+        \`name\`,
+        \`enName\`,
+        \`placeId\`,
+        \`code\`
       FROM country`);
   }
 
@@ -39,11 +39,11 @@ export class CountriesService extends BaseService<ICountryDTO> {
   async getItem(id: TID): Promise<ICountryDTO> {
     return await this.query(`
       SELECT
-        id,
-        name,
-        enName,
-        placeId,
-        code
+        \`id\`,
+        \`name\`,
+        \`enName\`,
+        \`placeId\`,
+        \`code\`
       FROM country
       WHERE id = ${id}`);
   }

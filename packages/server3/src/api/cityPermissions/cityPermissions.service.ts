@@ -19,9 +19,9 @@ export class CityPermissionsService extends BaseService<ICityPermissionDTO> {
   async getAll(): Promise<ICityPermissionDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        cityId,
-        userId
+        \`id\`,
+        \`cityId\`,
+        \`userId\`
       FROM city_permission`);
   }
 
@@ -37,9 +37,9 @@ export class CityPermissionsService extends BaseService<ICityPermissionDTO> {
   async getItem(id: TID): Promise<ICityPermissionDTO> {
     return await this.query(`
       SELECT
-        id,
-        cityId,
-        userId
+        \`id\`,
+        \`cityId\`,
+        \`userId\`
       FROM city_permission
       WHERE id = ${id}`);
   }

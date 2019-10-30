@@ -20,7 +20,7 @@ export class {{serviceName}} extends BaseService<{{interfaceName}}> {
     return await this.query(`
       SELECT
         {{#each fields}}
-        {{field}}{{separator}}
+        \`{{field}}\`{{separator}}
         {{/each}} 
       FROM {{tableName}}`);
   }
@@ -38,7 +38,7 @@ export class {{serviceName}} extends BaseService<{{interfaceName}}> {
     return await this.query(`
       SELECT
         {{#each fields}}
-        {{field}}{{separator}}
+        \`{{field}}\`{{separator}}
         {{/each}} 
       FROM {{tableName}}
       WHERE id = ${id}`);

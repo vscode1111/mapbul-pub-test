@@ -19,9 +19,9 @@ export class SubcategoriesService extends BaseService<ISubcategoryDTO> {
   async getAll(): Promise<ISubcategoryDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        markerId,
-        categoryId
+        \`id\`,
+        \`markerId\`,
+        \`categoryId\`
       FROM subcategory`);
   }
 
@@ -37,9 +37,9 @@ export class SubcategoriesService extends BaseService<ISubcategoryDTO> {
   async getItem(id: TID): Promise<ISubcategoryDTO> {
     return await this.query(`
       SELECT
-        id,
-        markerId,
-        categoryId
+        \`id\`,
+        \`markerId\`,
+        \`categoryId\`
       FROM subcategory
       WHERE id = ${id}`);
   }

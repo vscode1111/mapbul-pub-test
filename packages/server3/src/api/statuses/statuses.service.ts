@@ -19,9 +19,9 @@ export class StatusesService extends BaseService<IStatusDTO> {
   async getAll(): Promise<IStatusDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        tag,
-        description
+        \`id\`,
+        \`tag\`,
+        \`description\`
       FROM status`);
   }
 
@@ -37,9 +37,9 @@ export class StatusesService extends BaseService<IStatusDTO> {
   async getItem(id: TID): Promise<IStatusDTO> {
     return await this.query(`
       SELECT
-        id,
-        tag,
-        description
+        \`id\`,
+        \`tag\`,
+        \`description\`
       FROM status
       WHERE id = ${id}`);
   }

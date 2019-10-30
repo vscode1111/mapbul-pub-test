@@ -19,9 +19,9 @@ export class CountryPermissionsService extends BaseService<ICountryPermissionDTO
   async getAll(): Promise<ICountryPermissionDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        countryId,
-        userId
+        \`id\`,
+        \`countryId\`,
+        \`userId\`
       FROM country_permission`);
   }
 
@@ -37,9 +37,9 @@ export class CountryPermissionsService extends BaseService<ICountryPermissionDTO
   async getItem(id: TID): Promise<ICountryPermissionDTO> {
     return await this.query(`
       SELECT
-        id,
-        countryId,
-        userId
+        \`id\`,
+        \`countryId\`,
+        \`userId\`
       FROM country_permission
       WHERE id = ${id}`);
   }

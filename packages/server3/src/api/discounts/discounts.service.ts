@@ -19,8 +19,8 @@ export class DiscountsService extends BaseService<IDiscountDTO> {
   async getAll(): Promise<IDiscountDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        value
+        \`id\`,
+        \`value\`
       FROM discount`);
   }
 
@@ -36,8 +36,8 @@ export class DiscountsService extends BaseService<IDiscountDTO> {
   async getItem(id: TID): Promise<IDiscountDTO> {
     return await this.query(`
       SELECT
-        id,
-        value
+        \`id\`,
+        \`value\`
       FROM discount
       WHERE id = ${id}`);
   }

@@ -19,9 +19,9 @@ export class UserTypesService extends BaseService<IUserTypeDTO> {
   async getAll(): Promise<IUserTypeDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        tag,
-        description
+        \`id\`,
+        \`tag\`,
+        \`description\`
       FROM usertype`);
   }
 
@@ -37,9 +37,9 @@ export class UserTypesService extends BaseService<IUserTypeDTO> {
   async getItem(id: TID): Promise<IUserTypeDTO> {
     return await this.query(`
       SELECT
-        id,
-        tag,
-        description
+        \`id\`,
+        \`tag\`,
+        \`description\`
       FROM usertype
       WHERE id = ${id}`);
   }

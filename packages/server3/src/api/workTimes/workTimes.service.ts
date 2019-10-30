@@ -19,11 +19,11 @@ export class WorkTimesService extends BaseService<IWorkTimeDTO> {
   async getAll(): Promise<IWorkTimeDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        openTime,
-        closeTime,
-        markerId,
-        weekDayId
+        \`id\`,
+        \`openTime\`,
+        \`closeTime\`,
+        \`markerId\`,
+        \`weekDayId\`
       FROM worktime`);
   }
 
@@ -39,11 +39,11 @@ export class WorkTimesService extends BaseService<IWorkTimeDTO> {
   async getItem(id: TID): Promise<IWorkTimeDTO> {
     return await this.query(`
       SELECT
-        id,
-        openTime,
-        closeTime,
-        markerId,
-        weekDayId
+        \`id\`,
+        \`openTime\`,
+        \`closeTime\`,
+        \`markerId\`,
+        \`weekDayId\`
       FROM worktime
       WHERE id = ${id}`);
   }

@@ -19,10 +19,10 @@ export class RegionsService extends BaseService<IRegionDTO> {
   async getAll(): Promise<IRegionDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        countryId,
-        name,
-        placeId
+        \`id\`,
+        \`countryId\`,
+        \`name\`,
+        \`placeId\`
       FROM region`);
   }
 
@@ -38,10 +38,10 @@ export class RegionsService extends BaseService<IRegionDTO> {
   async getItem(id: TID): Promise<IRegionDTO> {
     return await this.query(`
       SELECT
-        id,
-        countryId,
-        name,
-        placeId
+        \`id\`,
+        \`countryId\`,
+        \`name\`,
+        \`placeId\`
       FROM region
       WHERE id = ${id}`);
   }

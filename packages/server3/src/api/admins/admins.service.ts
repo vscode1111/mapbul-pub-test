@@ -19,9 +19,9 @@ export class AdminsService extends BaseService<IAdminDTO> {
   async getAll(): Promise<IAdminDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        superuser
+        \`id\`,
+        \`userId\`,
+        \`superuser\`
       FROM admin`);
   }
 
@@ -37,9 +37,9 @@ export class AdminsService extends BaseService<IAdminDTO> {
   async getItem(id: TID): Promise<IAdminDTO> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        superuser
+        \`id\`,
+        \`userId\`,
+        \`superuser\`
       FROM admin
       WHERE id = ${id}`);
   }

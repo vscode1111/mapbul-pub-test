@@ -19,15 +19,15 @@ export class TenantsService extends BaseService<ITenantDTO> {
   async getAll(): Promise<ITenantDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM tenant`);
   }
 
@@ -43,15 +43,15 @@ export class TenantsService extends BaseService<ITenantDTO> {
   async getItem(id: TID): Promise<ITenantDTO> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM tenant
       WHERE id = ${id}`);
   }

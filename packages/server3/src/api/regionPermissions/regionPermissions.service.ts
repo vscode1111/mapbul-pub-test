@@ -19,9 +19,9 @@ export class RegionPermissionsService extends BaseService<IRegionPermissionDTO> 
   async getAll(): Promise<IRegionPermissionDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        regionId,
-        userId
+        \`id\`,
+        \`regionId\`,
+        \`userId\`
       FROM region_permission`);
   }
 
@@ -37,9 +37,9 @@ export class RegionPermissionsService extends BaseService<IRegionPermissionDTO> 
   async getItem(id: TID): Promise<IRegionPermissionDTO> {
     return await this.query(`
       SELECT
-        id,
-        regionId,
-        userId
+        \`id\`,
+        \`regionId\`,
+        \`userId\`
       FROM region_permission
       WHERE id = ${id}`);
   }

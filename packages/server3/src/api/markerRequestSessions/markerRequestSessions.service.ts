@@ -19,9 +19,9 @@ export class MarkerRequestSessionsService extends BaseService<IMarkerRequestSess
   async getAll(): Promise<IMarkerRequestSessionDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        sessionId,
-        markerId
+        \`id\`,
+        \`sessionId\`,
+        \`markerId\`
       FROM marker_request_session`);
   }
 
@@ -37,9 +37,9 @@ export class MarkerRequestSessionsService extends BaseService<IMarkerRequestSess
   async getItem(id: TID): Promise<IMarkerRequestSessionDTO> {
     return await this.query(`
       SELECT
-        id,
-        sessionId,
-        markerId
+        \`id\`,
+        \`sessionId\`,
+        \`markerId\`
       FROM marker_request_session
       WHERE id = ${id}`);
   }

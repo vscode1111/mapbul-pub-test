@@ -19,16 +19,16 @@ export class GuidesService extends BaseService<IGuideDTO> {
   async getAll(): Promise<IGuideDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        editorId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`editorId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM guide`);
   }
 
@@ -44,16 +44,16 @@ export class GuidesService extends BaseService<IGuideDTO> {
   async getItem(id: TID): Promise<IGuideDTO> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        editorId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`editorId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM guide
       WHERE id = ${id}`);
   }

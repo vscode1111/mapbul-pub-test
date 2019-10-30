@@ -19,15 +19,15 @@ export class EditorsService extends BaseService<IEditorsDTO> {
   async getAll(): Promise<IEditorsDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM editor`);
   }
 
@@ -43,15 +43,15 @@ export class EditorsService extends BaseService<IEditorsDTO> {
   async getItem(id: TID): Promise<IEditorsDTO> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM editor
       WHERE id = ${id}`);
   }

@@ -19,16 +19,16 @@ export class JournalistsService extends BaseService<IJournalistDTO> {
   async getAll(): Promise<IJournalistDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        editorId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`editorId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM journalist`);
   }
 
@@ -44,16 +44,16 @@ export class JournalistsService extends BaseService<IJournalistDTO> {
   async getItem(id: TID): Promise<IJournalistDTO> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        editorId,
-        firstName,
-        middleName,
-        lastName,
-        gender,
-        phone,
-        birthDate,
-        address
+        \`id\`,
+        \`userId\`,
+        \`editorId\`,
+        \`firstName\`,
+        \`middleName\`,
+        \`lastName\`,
+        \`gender\`,
+        \`phone\`,
+        \`birthDate\`,
+        \`address\`
       FROM journalist
       WHERE id = ${id}`);
   }

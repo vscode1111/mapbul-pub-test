@@ -19,10 +19,10 @@ export class WeekDaysService extends BaseService<IWeekDayDTO> {
   async getAll(): Promise<IWeekDayDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        tag,
-        description,
-        descriptionEn
+        \`id\`,
+        \`tag\`,
+        \`description\`,
+        \`descriptionEn\`
       FROM weekday`);
   }
 
@@ -38,10 +38,10 @@ export class WeekDaysService extends BaseService<IWeekDayDTO> {
   async getItem(id: TID): Promise<IWeekDayDTO> {
     return await this.query(`
       SELECT
-        id,
-        tag,
-        description,
-        descriptionEn
+        \`id\`,
+        \`tag\`,
+        \`description\`,
+        \`descriptionEn\`
       FROM weekday
       WHERE id = ${id}`);
   }

@@ -19,9 +19,9 @@ export class ArticleSubcategoriesService extends BaseService<IArticleSubcategory
   async getAll(): Promise<IArticleSubcategoryDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        articleId,
-        categoryId
+        \`id\`,
+        \`articleId\`,
+        \`categoryId\`
       FROM articlesubcategory`);
   }
 
@@ -37,9 +37,9 @@ export class ArticleSubcategoriesService extends BaseService<IArticleSubcategory
   async getItem(id: TID): Promise<IArticleSubcategoryDTO> {
     return await this.query(`
       SELECT
-        id,
-        articleId,
-        categoryId
+        \`id\`,
+        \`articleId\`,
+        \`categoryId\`
       FROM articlesubcategory
       WHERE id = ${id}`);
   }

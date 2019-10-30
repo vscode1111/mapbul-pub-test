@@ -19,13 +19,13 @@ export class UsersService extends BaseService<IUserDTO> {
   async getAll(): Promise<IUserDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        email,
-        password,
-        guid,
-        userTypeId,
-        registrationDate,
-        deleted
+        \`id\`,
+        \`email\`,
+        \`password\`,
+        \`guid\`,
+        \`userTypeId\`,
+        \`registrationDate\`,
+        \`deleted\`
       FROM user`);
   }
 
@@ -41,13 +41,13 @@ export class UsersService extends BaseService<IUserDTO> {
   async getItem(id: TID): Promise<IUserDTO> {
     return await this.query(`
       SELECT
-        id,
-        email,
-        password,
-        guid,
-        userTypeId,
-        registrationDate,
-        deleted
+        \`id\`,
+        \`email\`,
+        \`password\`,
+        \`guid\`,
+        \`userTypeId\`,
+        \`registrationDate\`,
+        \`deleted\`
       FROM user
       WHERE id = ${id}`);
   }

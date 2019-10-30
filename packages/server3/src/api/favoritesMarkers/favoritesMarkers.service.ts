@@ -19,9 +19,9 @@ export class FavoritesMarkersService extends BaseService<IFavoritesMarkerDTO> {
   async getAll(): Promise<IFavoritesMarkerDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        markerId
+        \`id\`,
+        \`userId\`,
+        \`markerId\`
       FROM favorites_marker`);
   }
 
@@ -37,9 +37,9 @@ export class FavoritesMarkersService extends BaseService<IFavoritesMarkerDTO> {
   async getItem(id: TID): Promise<IFavoritesMarkerDTO> {
     return await this.query(`
       SELECT
-        id,
-        userId,
-        markerId
+        \`id\`,
+        \`userId\`,
+        \`markerId\`
       FROM favorites_marker
       WHERE id = ${id}`);
   }

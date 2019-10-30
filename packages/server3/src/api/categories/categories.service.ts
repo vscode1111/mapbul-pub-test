@@ -19,15 +19,15 @@ export class CategoriesService extends BaseService<ICategoryDTO> {
   async getAll(): Promise<ICategoryDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        name,
-        enName,
-        parentId,
-        addedDate,
-        icon,
-        color,
-        pin,
-        forArticle
+        \`id\`,
+        \`name\`,
+        \`enName\`,
+        \`parentId\`,
+        \`addedDate\`,
+        \`icon\`,
+        \`color\`,
+        \`pin\`,
+        \`forArticle\`
       FROM category`);
   }
 
@@ -43,15 +43,15 @@ export class CategoriesService extends BaseService<ICategoryDTO> {
   async getItem(id: TID): Promise<ICategoryDTO> {
     return await this.query(`
       SELECT
-        id,
-        name,
-        enName,
-        parentId,
-        addedDate,
-        icon,
-        color,
-        pin,
-        forArticle
+        \`id\`,
+        \`name\`,
+        \`enName\`,
+        \`parentId\`,
+        \`addedDate\`,
+        \`icon\`,
+        \`color\`,
+        \`pin\`,
+        \`forArticle\`
       FROM category
       WHERE id = ${id}`);
   }

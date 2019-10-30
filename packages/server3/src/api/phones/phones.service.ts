@@ -19,10 +19,10 @@ export class PhonesService extends BaseService<IPhoneDTO> {
   async getAll(): Promise<IPhoneDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        number,
-        markerId,
-        primary
+        \`id\`,
+        \`number\`,
+        \`markerId\`,
+        \`primary\`
       FROM phone`);
   }
 
@@ -38,10 +38,10 @@ export class PhonesService extends BaseService<IPhoneDTO> {
   async getItem(id: TID): Promise<IPhoneDTO> {
     return await this.query(`
       SELECT
-        id,
-        number,
-        markerId,
-        primary
+        \`id\`,
+        \`number\`,
+        \`markerId\`,
+        \`primary\`
       FROM phone
       WHERE id = ${id}`);
   }

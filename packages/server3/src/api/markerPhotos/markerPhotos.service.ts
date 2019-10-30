@@ -19,10 +19,10 @@ export class MarkerPhotosService extends BaseService<IMarkerPhotosDTO> {
   async getAll(): Promise<IMarkerPhotosDTO[]> {
     return await this.query(`
       SELECT
-        id,
-        markerId,
-        photo,
-        photoMini
+        \`id\`,
+        \`markerId\`,
+        \`photo\`,
+        \`photoMini\`
       FROM marker_photos`);
   }
 
@@ -38,10 +38,10 @@ export class MarkerPhotosService extends BaseService<IMarkerPhotosDTO> {
   async getItem(id: TID): Promise<IMarkerPhotosDTO> {
     return await this.query(`
       SELECT
-        id,
-        markerId,
-        photo,
-        photoMini
+        \`id\`,
+        \`markerId\`,
+        \`photo\`,
+        \`photoMini\`
       FROM marker_photos
       WHERE id = ${id}`);
   }
