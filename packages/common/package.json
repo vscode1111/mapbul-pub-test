@@ -28,25 +28,27 @@
   "devDependencies": {
     "@types/app-root-path": "^1.2.4",
     "@types/fs-extra": "^8.0.0",
-    "@types/mkdirp": "^0.5.2",
     "@types/jest": "^24.0.11",
+    "@types/mkdirp": "^0.5.2",
+    "@types/mysql": "^2.15.7",
     "cross-env": "^6.0.0",
+    "jest": "^24.7.1",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
+    "ts-jest": "^24.0.2",
     "ts-loader": "^6.2.0",
     "ts-node-dev": "^1.0.0-pre.43",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.4.3",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.1",
-    "jest": "^24.7.1",
-    "ts-jest": "^24.0.2"
+    "webpack-cli": "^3.2.1"
   },
   "dependencies": {
+    "app-root-path": "^2.2.1",
+    "dotenv": "^8.1.0",
     "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
-    "dotenv": "^8.1.0",
-    "app-root-path": "^2.2.1"
+    "mysql": "^2.17.1"
   },
   "gitHead": "165f7993c2acc907c653c02847fb02721052c6e7",
   "jest": {
