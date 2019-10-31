@@ -1,19 +1,12 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
-    "module": "commonjs",
+    // "baseUrl": ".",
     "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
-    "allowJs": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "paths": {
-      "server/*": ["./src/*"],
+      // "server/*": ["./src/*"],
+      "server/*": ["./packages/server3/src/*"],
     }
   },
   "include": [

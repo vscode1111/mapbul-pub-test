@@ -3,11 +3,12 @@ import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 
-import { GlobalVar } from '@mapbul-pub/common';
+import { GlobalVar, test } from '@mapbul-pub/common';
 GlobalVar.setup(`${appRootPath}/.env`);
 console.log(GlobalVar.env);
 
 async function bootstrap() {
+  test();
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const port = process.env.PORT || 3200;
   app.setBaseViewsDir(`${appRootPath}/views`);

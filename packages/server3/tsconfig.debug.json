@@ -1,26 +1,14 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
-    "module": "commonjs",
-    "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
-    "allowJs": true,
-    "outDir": "./dist",
+    // "baseUrl": ".",
+    "outDir": "dist",
     "paths": {
-      "server/*": ["./src/*"],
-    }
+      "@mapbul-pub/common": ["./packages/common/src"],
+      "@mapbul-pub/codegen3": ["./packages/codegen3/src"],
+      "server/*": ["./packages/server3/src/*"],
+      "codegen/*": ["./packages/codegen3/src/*"],
+    }  
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  // "include": ["./src/**/*"]
 }
