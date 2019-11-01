@@ -2,8 +2,7 @@ import * as mysql from 'mysql';
 import * as util from 'util';
 import { Connection } from 'mysql';
 import { GlobalVar } from '.';
-
-export type queryFn = (expression: string) => Promise<any>;
+import { queryFn } from '@mapbul-pub/types';
 
 class DbConnection {
   private connectionInt: Connection;

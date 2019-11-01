@@ -1,5 +1,5 @@
 import { IField } from 'codegen/IField';
-import { queryFn } from '@mapbul-pub/common';
+import { queryFn } from '@mapbul-pub/types';
 
 interface IDescribeRowData {
   Default: any;

@@ -4,9 +4,9 @@ import { sleep } from '@mapbul-pub/common';
 import { getFields } from 'codegen/getFields';
 import { createSorce } from 'codegen/generateSource';
 import { appendRouterSync } from 'codegen/routerStorage';
-import {TempNamespace} from '@mapbul-pub/common';
+import { queryFn } from '@mapbul-pub/types';
 
-export const generateController = async (query: TempNamespace.queryFn2, tableName: string, dto: string, service: string): Promise<void> => {
+export const generateController = async (query: queryFn, tableName: string, dto: string, service: string): Promise<void> => {
   const baseName = `${service[0].toUpperCase()}${service.slice(1)}`;
   const serviceName = `${baseName}Service`;
   const controllerName = `${baseName}Controller`;

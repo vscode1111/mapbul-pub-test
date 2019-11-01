@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@mapbul-pub/common": "^1.0.0",
+    "@mapbul-pub/types": "^1.0.0",
     "@types/mysql": "^2.15.7",
     "app-root-path": "^2.2.1",
     "handlebars": "^4.4.3",
