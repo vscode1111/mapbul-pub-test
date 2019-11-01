@@ -8,7 +8,8 @@ export type queryFn = (expression: string) => Promise<any>;
 class DbConnection {
   private connectionInt: Connection;
   private queryInt: queryFn;
-  constructor() {
+
+  public setup() {
     this.connectionInt = mysql.createConnection(GlobalVar.env.dbConnection);
     this.queryInt = util.promisify(this.connectionInt.query).bind(this.connectionInt);
   }
@@ -20,6 +21,12 @@ class DbConnection {
   public get query(): queryFn {
     return this.queryInt;
   }
+
+  public destroy() {
+    if (this.connectionInt) {
+      this.connectionInt.destroy();
+    }
+  }
 }
 
 // tslint:disable-next-line: max-classes-per-file
@@ -27,7 +34,7 @@ export class DbConnectionSingleton {
   private static instance: DbConnection;
 
   constructor() {
-    if (DbConnectionSingleton.instance) {
+    if (!DbConnectionSingleton.instance) {
       DbConnectionSingleton.instance = new DbConnection();
     }
   }
@@ -36,3 +43,5 @@ export class DbConnectionSingleton {
     return DbConnectionSingleton.instance;
   }
 }
+
+export const dbConnectionSingleton = new DbConnectionSingleton();

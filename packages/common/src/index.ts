@@ -5,5 +5,13 @@ export * from './serverConfig';
 export * from './dbConnection';
 
 export const test = () => {
-  console.log('test 12356++');
+  console.log('test 12356+');
 };
+
+// export namespace TempNamespace {
+//   export type queryFn = (expression: string) => Promise<any>;
+// }
+
+export interface ITemp {
+  temp: string;
+}

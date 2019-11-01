@@ -1,12 +1,5 @@
-import * as mysql from 'mysql';
-import * as util from 'util';
-import { Connection } from 'mysql';
 import { IField } from 'codegen/IField';
-import { GlobalVar } from '@mapbul-pub/common';
-
-let connection: Connection;
-
-export type queryFn = (expression: string) => Promise<any>;
+import { queryFn } from '@mapbul-pub/common';
 
 interface IDescribeRowData {
   Default: any;
@@ -31,18 +24,6 @@ const traslateType = (type: string) => {
     return 'Date';
   }
   return type;
-};
-
-export const initConnection = () => {
-  connection = mysql.createConnection(GlobalVar.env.dbConnection);
-  const query: queryFn = util.promisify(connection.query).bind(connection);
-  return query;
-};
-
-export const closeConnection = () => {
-  if (connection) {
-    connection.destroy();
-  }
 };
 
 export const getFields = async (query: queryFn, tableName: string) => {

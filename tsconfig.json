@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "lib",
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
