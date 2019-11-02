@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "ncp tsconfig.build.json tsconfig.json && webpack",
-    "build": "ncp tsconfig.build.json tsconfig.json && rimraf dist && webpack",
+    "build": "node scripts/buildServer",
     "build:tsc": "rimraf dist && tsc -p tsconfig.build.json",
     "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6590 --respawn src/main.ts",
     "format": "prettier --write \"src/**/*.ts\"",

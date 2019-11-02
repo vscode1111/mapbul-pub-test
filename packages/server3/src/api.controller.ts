@@ -6,7 +6,7 @@ export class ApiController {
   @Get()
   @Render('api')
   root() {
-    const apiText = readRouterSync();
+    const apiText = readRouterSync(`${__dirname}/api.txt`);
     const apiInits = apiText.split(/\r?\n/);
     const apis: string[] = [];
     apiInits.forEach((item: string) => {
