@@ -1,11 +1,19 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",    
+    // "baseUrl": ".",
+    "declaration": false,
     "outDir": "dist",
     "paths": {
-      "server/*": ["./src/*"],
+      // "server/*": ["./src/*"],
+      "server/*": ["./packages/server3/src/*"],
     }
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
-

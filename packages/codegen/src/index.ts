@@ -1,32 +1,19 @@
-export const codegenTest = () => {
-  console.log('test 2323-');
-};
-
-
-import appRootPath from 'app-root-path';
-import { setEnvVariables } from '@mapbul-pub/common';
-const path = `${appRootPath}/.env`;
-console.log(path);
-setEnvVariables(path);
-
 import { generateControllers } from 'codegen/generateControllers';
-// import { sleep } from '@mapbul-pub/common';
 
-export * from './generateControllers';
+// import appRootPath from 'app-root-path';
+// import { GlobalVar } from '@mapbul-pub/common';
+// const path = `${appRootPath}/.env`;
+// console.log(path);
+// GlobalVar.setup(path);
+
 export * from './routerStorage';
-
-
+export * from './generateControllers';
 
 // generateControllers();
 
-// export const main = async () => {
-//   await sleep(1000);
-//   console.log('starting2');
+export const test = () => {
+  console.log('test 123');
+};
 
-//   // test();
-//   const t = 79;
-//   console.log(t);
-//   console.log(t);
-// };
 
-// main();
+console.log('index from codegen 3.4');

@@ -1,37 +1,18 @@
-// if (process.env.NODE_ENV !== 'development') {
-//   require('module-alias/register');
-//   console.log('module-alias/register');
-// }
-
-// import { setEnvVariables, serverConfig } from 'common/serverConfig';
-// setEnvVariables(__dirname + '/.env');
-// console.log(serverConfig);
-
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from 'server/app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
-import { join } from 'path';
+import { AppModule } from './app.module';
 
-import { test, sleep } from '@mapbul-pub/common';
-import { codegenTest } from '@mapbul-pub/codegen';
-
-
-declare const module: any;
+import { GlobalVar, test } from '@mapbul-pub/common';
+GlobalVar.setup(`${__dirname}/.env`);
+console.log(GlobalVar.env);
 
 async function bootstrap() {
   test();
-  // codegenTest();
-  const port = process.env.PORT || 3200;
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.setBaseViewsDir(join(__dirname, 'views'));
+  const port = process.env.PORT || 3200;
+  app.setBaseViewsDir(`${__dirname}/views`);
   app.setViewEngine('hbs');
-
   await app.listen(port);
-
-  if (module.hot) {
-    module.hot.accept();
-    module.hot.dispose(() => app.close());
-  }
   console.log(`Server started at http://localhost:${port}`);
 }
 bootstrap();

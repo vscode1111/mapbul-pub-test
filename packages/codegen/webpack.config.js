@@ -1,38 +1,36 @@
-const webpack = require('webpack');
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-
 module.exports = {
-  target: 'node',
+  target: "node",
+  // node: {
+  //   dotenv: 'empty',
+  // },
   mode: 'production',
-  entry: ['webpack/hot/poll?100', './src/index.ts'],
-  // watch: true,
   externals: [
-    nodeExternals({
-      whitelist: ['webpack/hot/poll?100'],
-    }),
+    nodeExternals(),
   ],
-  module: {
-    rules: [
-      {
-        test: /.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
+  entry: {
+    index: './src/index.ts'
+  },
+  output: {
+    path: path.resolve(__dirname, 'lib'),
+    filename: '[name].js',
+    libraryTarget: 'umd',
+    library: 'Common',
+    umdNamedDefine: true,
+    globalObject: 'this'
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
     plugins: [new TsconfigPathsPlugin({ })]
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  // devtool: 'source-map',
   optimization: {
     minimize: true
   },
-  output: {
-    path: path.join(__dirname, 'lib'),
-    filename: 'index.js',
-  },
-};
+  module: {
+    rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }]
+  }
+}

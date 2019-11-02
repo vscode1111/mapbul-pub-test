@@ -2,10 +2,11 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./lib",
+    // "rootDir": "src",
+    "outDir": "lib",
     "paths": {
       "codegen/*": ["./src/*"],
     }
   },
-  "exclude": ["node_modules", "lib"]
+  //"include": ["./src/**/*"]
 }

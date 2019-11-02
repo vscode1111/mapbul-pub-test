@@ -1,20 +1,19 @@
 import { Controller, Get, Render } from '@nestjs/common';
-import { readRouterSync, codegenTest } from '@mapbul-pub/codegen';
+import { readRouterSync } from '@mapbul-pub/codegen3';
 
 @Controller('api')
 export class ApiController {
   @Get()
   @Render('api')
   root() {
-    codegenTest();
-    const apiText = readRouterSync();
+    const apiText = readRouterSync(`${__dirname}/api.txt`);
     const apiInits = apiText.split(/\r?\n/);
-    const apis = [];
-    apiInits.forEach(item => {
+    const apis: string[] = [];
+    apiInits.forEach((item: string) => {
       if (item !== '') {
         apis.push(`/${item.trim()}`);
       }
     });
-    return { message: 'Hello, API!', apis };
+    return { message: 'Hello, API2!', apis };
   }
 }

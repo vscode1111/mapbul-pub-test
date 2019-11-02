@@ -1,14 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    // "esModuleInterop": false,
-    "baseUrl": "./",
-    "outDir": "./dist",
+    // "baseUrl": ".",
+    "outDir": "dist",
     "paths": {
       "@mapbul-pub/common": ["./packages/common/src"],
-      "@mapbul-pub/codegen": ["./packages/codegen/src"],
-      "server/*": ["./src/*"],
+      "@mapbul-pub/codegen3": ["./packages/codegen3/src"],
+      "server/*": ["./packages/server3/src/*"],
+      "codegen/*": ["./packages/codegen3/src/*"],
     }  
   },
-  "include": ["./src/**/*"]
+  // "include": ["./src/**/*"]
 }

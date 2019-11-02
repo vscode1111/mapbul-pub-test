@@ -1,10 +1,12 @@
-import appRootPath from 'app-root-path';
 import * as path from 'path';
+import appRootPath from 'app-root-path';
+import { sleep } from '@mapbul-pub/common';
 import { getFields } from 'codegen/getFields';
 import { createSorce } from 'codegen/generateSource';
 import { appendRouterSync } from 'codegen/routerStorage';
+import { queryFn } from '@mapbul-pub/types';
 
-export const generateController = async (tableName: string, dto: string, service: string) => {
+export const generateController = async (query: queryFn, tableName: string, dto: string, service: string): Promise<void> => {
   const baseName = `${service[0].toUpperCase()}${service.slice(1)}`;
   const serviceName = `${baseName}Service`;
   const controllerName = `${baseName}Controller`;
@@ -17,10 +19,9 @@ export const generateController = async (tableName: string, dto: string, service
   const filePrefix = `${service[0].toLowerCase()}${service.slice(1)}`;
 
   const templateRootPath = `${appRootPath.path}/src/templates`;
-  // const sourceRootPath = `${appRootPath.path}/src/server`;
-  const sourceRootPath = path.join(appRootPath.path, '..', '/server/src');
+  const sourceRootPath = path.join(appRootPath.path, '..', '/server3/src');
 
-  const fields = await getFields(tableName);
+  const fields = await getFields(query, tableName);
 
   // Create *.dto.ts
   createSorce({
