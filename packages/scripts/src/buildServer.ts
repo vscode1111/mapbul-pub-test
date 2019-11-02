@@ -7,16 +7,16 @@ export const buildServer = () => {
   const distDir = `${appRootPath.path}/dist`;
   console.log('Dist folder is removing...');
   try {
-    removeDirSync(`${distDir}/server`);
+    removeDirSync(`${distDir}`);
   } catch (e) {
     console.log(e);
   }
   console.log('Files are copying...');
-  copyFileSync(`${srcDir}/server/.env`, `${distDir}/server/.env`);
-  copyFileSync(`${srcDir}/server/views/api.hbs`, `${distDir}/server/views/api.hbs`);
-  copyFileSync(`${srcDir}/server/api.txt`, `${distDir}/server/api.txt`);
+  copyFileSync(`${srcDir}/.env`, `${distDir}/.env`);
+  copyFileSync(`${srcDir}/views/api.hbs`, `${distDir}/views/api.hbs`);
+  copyFileSync(`${srcDir}/api.txt`, `${distDir}/api.txt`);
   console.log('Compiling...');
-  const output = runSync(`tsc -p ${appRootPath.path}/tsconfig.server-build.json --diagnostics`);
+  const output = runSync(`npm run prebuild`);
   console.log(output);
   console.log('Cleaning...');
   removeFileSync(`${distDir}/tsconfig.server-build.tsbuildinfo`);
