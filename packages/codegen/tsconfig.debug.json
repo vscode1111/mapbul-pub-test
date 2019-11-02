@@ -3,7 +3,7 @@
   "compilerOptions": {
     "paths": {
       "@mapbul-pub/common": ["./packages/common/src"],
-      "codegen/*": ["./packages/codegen3/src/*"],
+      "codegen/*": ["./packages/codegen/src/*"],
     }  
   },
 }

@@ -1,6 +1,5 @@
 import * as path from 'path';
 import appRootPath from 'app-root-path';
-import { sleep } from '@mapbul-pub/common';
 import { getFields } from 'codegen/getFields';
 import { createSorce } from 'codegen/generateSource';
 import { appendRouterSync } from 'codegen/routerStorage';
@@ -19,7 +18,7 @@ export const generateController = async (query: queryFn, tableName: string, dto:
   const filePrefix = `${service[0].toLowerCase()}${service.slice(1)}`;
 
   const templateRootPath = `${appRootPath.path}/src/templates`;
-  const sourceRootPath = path.join(appRootPath.path, '..', '/server3/src');
+  const sourceRootPath = path.join(appRootPath.path, '..', '/server/src');
 
   const fields = await getFields(query, tableName);
 

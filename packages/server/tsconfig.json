@@ -6,7 +6,7 @@
     "outDir": "dist",
     "paths": {
       // "server/*": ["./src/*"],
-      "server/*": ["./packages/server3/src/*"],
+      "server/*": ["./packages/server/src/*"],
     }
   },
   "include": [

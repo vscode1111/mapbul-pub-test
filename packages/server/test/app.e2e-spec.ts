@@ -3,7 +3,7 @@ import * as appRootPath from 'app-root-path';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppModule } from './../src/app.module';
 import { GlobalVar } from '@mapbul-pub/common';
-import { readRouterSync } from '@mapbul-pub/codegen3';
+import { readRouterSync } from '@mapbul-pub/codegen';
 
 describe('AppController (e2e)', () => {
   let app;
