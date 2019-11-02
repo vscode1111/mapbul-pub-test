@@ -8,8 +8,8 @@ export class ApiController {
   root() {
     const apiText = readRouterSync();
     const apiInits = apiText.split(/\r?\n/);
-    const apis = [];
-    apiInits.forEach(item => {
+    const apis: string[] = [];
+    apiInits.forEach((item: string) => {
       if (item !== '') {
         apis.push(`/${item.trim()}`);
       }
