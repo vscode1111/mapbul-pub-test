@@ -8,7 +8,7 @@
     "build": "ncp tsconfig.build.json tsconfig.json && npm run clean && webpack",
     "start:prod": "node lib/index.js",  
     "debug": "ncp tsconfig.debug.json tsconfig.json && cross-env NODE_ENV=development ts-node-dev --project tsconfig.debug.json -r tsconfig-paths/register  --inspect=6591 --respawn src/debug.ts",
-    "start": "node -e 'require(\"./lib/index\").generateControllers()'",
+    "start": "node scripts/start",
     "test": "jest"
   },
   "keywords": [

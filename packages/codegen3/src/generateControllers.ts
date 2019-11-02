@@ -2,12 +2,11 @@
 //   require('module-alias/register');
 //   console.log('module-alias/register');
 // }
-
+import appRootPath from 'app-root-path';
 import { generateController } from 'codegen/generateController';
 import { deleteRouterSync } from 'codegen/routerStorage';
 import { sleep } from '@mapbul-pub/common';
 import { GlobalVar, dbConnectionSingleton, test } from '@mapbul-pub/common';
-import appRootPath from 'app-root-path';
 
 export const generateControllers = async () => {
   console.log('test5');

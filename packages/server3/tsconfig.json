@@ -2,13 +2,18 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     // "baseUrl": ".",
+    "declaration": false,
     "outDir": "dist",
     "paths": {
-      "@mapbul-pub/common": ["./packages/common/src"],
-      "@mapbul-pub/codegen3": ["./packages/codegen3/src"],
+      // "server/*": ["./src/*"],
       "server/*": ["./packages/server3/src/*"],
-      "codegen/*": ["./packages/codegen3/src/*"],
-    }  
+    }
   },
-  // "include": ["./src/**/*"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
